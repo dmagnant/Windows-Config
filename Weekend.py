@@ -16,6 +16,7 @@ os.startfile(r'C:\Program Files (x86)\ExpressVPN\expressvpn-ui\ExpressVPN.exe')
 time.sleep(3)
 EVPN = ahk.win_get(title='ExpressVPN')
 EVPN.close()
+
 # Start Flux
 os.startfile(r'C:\Users\dmagn\AppData\Local\FluxSoftware\Flux\flux.exe')
 time.sleep(1)

@@ -1,4 +1,4 @@
-Requirements: Windows OS, Python, ExpressVPN, F.lux, AHK
+Requirements: Windows OS, Python, Powershell, AHK, nircmd
 
 Problem: When I created these scripts, my setup involved 3 monitors, with the middle one being shared between my work laptop and my gaming PC. When switching between work, playing video games, or just generally browsing while not during work hours, I would change several settings to optimize the PC accordingly.
 

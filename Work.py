@@ -9,7 +9,7 @@ from ahk import AHK
 ahk = AHK()
 
 # Set right monitor as primary
-os.system(r'"D:\\Google Drive\\Projects\\Coding\\nircmd.exe" setprimarydisplay 3')
+os.system(r'"C:\\Users\\dmagn\\Google Drive\\Projects\\Coding\\nircmd.exe" setprimarydisplay 1')
 
 # Set Audio Device to Speakers
 p = subprocess.Popen(["powershell.exe", '-ExecutionPolicy', 'Unrestricted', '-File', r'D:\\Google Drive\\Projects\\Coding\\speakers.ps1'])
@@ -19,6 +19,7 @@ os.startfile(r'C:\Program Files (x86)\ExpressVPN\expressvpn-ui\ExpressVPN.exe')
 time.sleep(3)
 EVPN = ahk.win_get(title='ExpressVPN')
 EVPN.close()
+
 # Start Flux
 os.startfile(r'C:\Users\dmagn\AppData\Local\FluxSoftware\Flux\flux.exe')
 time.sleep(1)
