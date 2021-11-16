@@ -5,23 +5,8 @@ Background: When I created these scripts, my setup involved 3 monitors, with the
 Three "modes" are available:
 Gaming, Work, Weekend
 
-Gaming:
-  Sets middle monitor as primary monitor
-  Sets headphones as primary audio device
-  Closes VPN
-  Closes F.lux (screen warmer application)
-  Minimizes all windows except gaming-related ones
-
-Work:
-  Sets right monitor as primary monitor
-  Sets speakers as primary audio device
-  Opens VPN
-  Opens F.lux
-  Closes gaming-related applictions
-  
-Weekend:
-  Sets middle monitor as primary monitor
-  Sets speakers as primary audio device
-  Opens VPN
-  Opens F.lux
-  Closes gaming-related applictions
+The following items are changed based on the modes above:
+primary monitor
+primary audio device
+VPN and Screen Warmer applications (open/close)
+gaming-related applications (minimize/maximize)
