@@ -4,11 +4,13 @@ Background: When I created these scripts, my setup involved 3 monitors, with the
 
 Three "modes" are available:
 
-Gaming,   Work,   Weekend
+Gaming, 
+Work, 
+Weekend
 
 The following items are changed based on the modes above:
 
-primary monitor, 
-primary audio device, 
+Primary monitor, 
+Primary audio device, 
 VPN and Screen Warmer applications (open/close), 
-gaming-related applications (minimize/maximize)
+Gaming-related applications (minimize/maximize)
