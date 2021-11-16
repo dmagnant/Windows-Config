@@ -2,7 +2,7 @@ import psutil
 import os
 import subprocess
 import time
-import pygetwindow as gw
+import pygetwindow
 import pyautogui
 
 def checkIfProcessRunning(processName):
@@ -19,20 +19,20 @@ def checkIfProcessRunning(processName):
 def startFlux():
     os.startfile(r'C:\Users\dmagn\AppData\Local\FluxSoftware\Flux\flux.exe')
     time.sleep(1)
-    flux = gw.getWindowsWithTitle('f.lux: Reduce eyestrain, day and night ')[0]
+    flux = pygetwindow.getWindowsWithTitle('f.lux: Reduce eyestrain, day and night ')[0]
     flux.minimize()
 
 def closeFlux():
     if checkIfProcessRunning('flux.exe'):
         os.startfile(r'C:\Users\dmagn\AppData\Local\FluxSoftware\Flux\flux.exe')
         time.sleep(1)
-        flux = gw.getWindowsWithTitle('f.lux: Reduce eyestrain, day and night ')[0]
+        flux = pygetwindow.getWindowsWithTitle('f.lux: Reduce eyestrain, day and night ')[0]
         flux.close()
 
 def startExpressVPN():
     os.startfile(r'C:\Program Files (x86)\ExpressVPN\expressvpn-ui\ExpressVPN.exe')
     time.sleep(3)
-    EVPN = gw.getWindowsWithTitle('ExpressVPN')[0]
+    EVPN = pygetwindow.getWindowsWithTitle('ExpressVPN')[0]
     EVPN.close()
     # stays open in system tray
 
@@ -40,7 +40,7 @@ def closeExpressVPN():
     if checkIfProcessRunning('ExpressVPN.exe'):
         os.startfile(r'C:\Program Files (x86)\ExpressVPN\expressvpn-ui\ExpressVPN.exe')
         time.sleep(1)
-        EVPN = gw.getWindowsWithTitle('ExpressVPN')[0]
+        EVPN = pygetwindow.getWindowsWithTitle('ExpressVPN')[0]
         EVPN.restore()
         EVPN.move(0, 0)
         EVPN.activate()
@@ -66,20 +66,19 @@ def setPrimaryAudio(device):
         p = subprocess.Popen(["powershell.exe", '-ExecutionPolicy', 'Unrestricted', '-File', r'C:\\Users\\dmagn\\Google Drive\\Projects\\Coding\\Python\\Windows Config\\Resources\\speakers.ps1'])
 
 def adjustWindows(mode):
-    for i in gw.getAllWindows():
+    for i in pygetwindow.getAllWindows():
         if mode == 'gaming':
             # minimize all windows except Discord and Steam
-            for i in gw.getAllWindows():
-                if i.title == "":
-                    continue
-                elif i.title == "Backup and Sync":
-                    continue
-                elif "Discord" in i.title:
-                    i.maximize()
-                elif "Steam" in i.title:
-                    i.maximize()
-                else:
-                    i.minimize()
+            if i.title == "":
+                continue
+            elif i.title == "Backup and Sync":
+                continue
+            elif "Discord" in i.title:
+                i.maximize()
+            elif "Steam" in i.title:
+                i.maximize()
+            else:
+                i.minimize()
 
         elif mode == 'work':
             # close Discord, close Steam
