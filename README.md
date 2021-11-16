@@ -7,7 +7,7 @@ Gaming, Work, Weekend
 
 The following items are changed based on the modes above:
 
-primary monitor
-primary audio device
-VPN and Screen Warmer applications (open/close)
-gaming-related applications (minimize/maximize)
+primary monitor, 
+primary audio device, 
+VPN and Screen Warmer applications (open/close), 
+gaming-related applications (minimize/maximize), 
