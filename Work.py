@@ -4,15 +4,12 @@ import subprocess
 import time
 import pygetwindow as gw
 from ahk import AHK
-
+from Functions import checkifprocessrunning, setPrimaryMonitor, setPrimaryAudio
 
 ahk = AHK()
 
-# Set right monitor as primary
-os.system(r'"C:\\Users\\dmagn\\Google Drive\\Projects\\Coding\\nircmd.exe" setprimarydisplay 1')
-
-# Set Audio Device to Speakers
-p = subprocess.Popen(["powershell.exe", '-ExecutionPolicy', 'Unrestricted', '-File', r'D:\\Google Drive\\Projects\\Coding\\speakers.ps1'])
+setPrimaryMonitor('right')
+setPrimaryAudio('speakers')
 
 # Start ExpressVPN
 os.startfile(r'C:\Program Files (x86)\ExpressVPN\expressvpn-ui\ExpressVPN.exe')

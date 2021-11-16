@@ -6,22 +6,10 @@ import pygetwindow as gw
 import psutil
 from ahk import AHK
 import socket
-from Functions import checkifprocessrunning
+from Functions import checkifprocessrunning, setPrimaryMonitor, setPrimaryAudio
 
-# get computer name
-computer = socket.gethostname()
-
-# computer-specific file paths
-if computer == "Big-Bertha":
-    # Set middle monitor as primary
-    os.system(r'"C:\\Users\\dmagn\\Google Drive\\Projects\\Coding\\nircmd.exe" setprimarydisplay 1')
-
-    # Set Audio Device to Headphones
-    p = subprocess.Popen(["powershell.exe", '-ExecutionPolicy', 'Unrestricted', '-File', r'C:\\Users\\dmagn\\Google Drive\\Projects\\Coding\\headphones.ps1'])
-elif computer == "Black-Betty":
-
-    # Set Audio Device to Headphones
-    p = subprocess.Popen(["powershell.exe", '-ExecutionPolicy', 'Unrestricted', '-File', r'D:\\Google Drive\\Projects\\Coding\\headphones.ps1'])
+setPrimaryMonitor('middle')
+setPrimaryAudio('headphones')
 
 ahk = AHK()
 

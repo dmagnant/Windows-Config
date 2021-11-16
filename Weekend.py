@@ -5,8 +5,12 @@ import subprocess
 import pygetwindow as gw
 import psutil
 from ahk import AHK
+from Functions import checkifprocessrunning, setPrimaryMonitor, setPrimaryAudio
 
 ahk = AHK()
+
+setPrimaryMonitor('middle')
+setPrimaryAudio('speakers')
 
 # Set Audio Device to Speakers
 p = subprocess.Popen(["powershell.exe", '-ExecutionPolicy', 'Unrestricted', '-File', r'D:\\Google Drive\\Projects\\Coding\\speakers.ps1'])
@@ -23,5 +27,3 @@ time.sleep(1)
 flux = ahk.win_get(title='f.lux: Reduce eyestrain, day and night')
 flux.minimize()
 
-# Set middle monitor as primary
-os.system(r'"D:\\Google Drive\\Projects\\Coding\\nircmd.exe" setprimarydisplay 1')
