@@ -16,3 +16,7 @@ Primary monitor,
 Primary audio device, 
 VPN and Screen Warmer applications (open/close), 
 Gaming-related applications (minimize/maximize)
+
+How-to-use:
+
+Using the EXAMPLE.bat file as reference, I created python files for each mode that update settings accordingly. I also created batch files on my desktop for each mode. Simply by double-clicking the apporpriate batch file, I can optimize my PC for that mode.
