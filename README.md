@@ -1,6 +1,8 @@
 Requirements: Windows OS, Python, ExpressVPN, F.lux, AHK
 
-Background: When I created these scripts, my setup involved 3 monitors, with the middle one being shared between my work laptop and my gaming PC. During work I would use my gaming PC to listen to music or podcasts and when work was over and I wanted to play video games, I would have to switch several settings to optimize the PC for gaming, so I decided to automate the process.
+Problem: When I created these scripts, my setup involved 3 monitors, with the middle one being shared between my work laptop and my gaming PC. When switching between work, playing video games, or just generally browsing while not during work hours, I would change several settings to optimize the PC accordingly.
+
+Solution: I decided to utilize Python, Powershell, and AHK to automate the process at the (double)-click of a button. 
 
 Three "modes" are available:
 
