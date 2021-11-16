@@ -1,6 +1,6 @@
-Problem: When I created these scripts, my setup involved 3 monitors, with the middle one being shared between my work laptop and my gaming PC. When switching between work, playing video games, or generally browsing during off-work hours, I would change several settings to optimize my gaming PC accordingly.
+Problem: When I created these scripts, my setup involved 3 monitors, with the middle one being shared between my work laptop and my gaming PC. When switching between work, playing video games, or generally browsing during off-work hours, I would change several settings to optimize my PC accordingly.
 
-Solution: I decided to utilize Python, Powershell, and nircmd to automate the process at the (double)-click of a button on my Windows-based gaming PC.
+Solution: I decided to utilize Python, Powershell, and nircmd to automate the process at the (double)-click of a button on my Windows-based PC.
 
 Three "modes" are available:
 
