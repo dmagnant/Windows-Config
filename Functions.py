@@ -3,8 +3,7 @@ import os
 import subprocess
 import time
 import pygetwindow as gw
-from ahk import AHK
-ahk = AHK()
+import pyautogui
 
 def checkIfProcessRunning(processName):
     # Iterate over the all the running process
@@ -20,7 +19,7 @@ def checkIfProcessRunning(processName):
 def startFlux():
     os.startfile(r'C:\Users\dmagn\AppData\Local\FluxSoftware\Flux\flux.exe')
     time.sleep(1)
-    flux = ahk.win_get(title='f.lux: Reduce eyestrain, day and night')
+    flux = gw.getWindowsWithTitle('f.lux: Reduce eyestrain, day and night ')[0]
     flux.minimize()
 
 def closeFlux():
@@ -33,7 +32,7 @@ def closeFlux():
 def startExpressVPN():
     os.startfile(r'C:\Program Files (x86)\ExpressVPN\expressvpn-ui\ExpressVPN.exe')
     time.sleep(3)
-    EVPN = ahk.win_get(title='ExpressVPN')
+    EVPN = gw.getWindowsWithTitle('ExpressVPN')[0]
     EVPN.close()
     # stays open in system tray
 
@@ -41,15 +40,14 @@ def closeExpressVPN():
     if checkIfProcessRunning('ExpressVPN.exe'):
         os.startfile(r'C:\Program Files (x86)\ExpressVPN\expressvpn-ui\ExpressVPN.exe')
         time.sleep(1)
-        EVPN = ahk.win_get(title='ExpressVPN')
+        EVPN = gw.getWindowsWithTitle('ExpressVPN')[0]
         EVPN.restore()
         EVPN.move(0, 0)
         EVPN.activate()
-        ahk.mouse_move(40, 50)
-        ahk.click()
+        pyautogui.leftClick(40, 50)
         time.sleep(1)
-        ahk.mouse_move(40, 280)
-        ahk.click()
+        pyautogui.leftClick(40, 280)
+        time.sleep(1)
 
 def setPrimaryMonitor(monitor):
     if monitor == 'middle':
