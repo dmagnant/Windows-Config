@@ -20,4 +20,4 @@ Gaming-related applications (minimize/maximize)
 How-to-use:
 
 I created python files for each mode that, when executed, update settings accordingly. I also created batch files on my desktop for each mode (use EXAMPLE.bat as reference).
-Then, simply by double-clicking the apporpriate batch file, I can optimize my PC for that mode.
+Then, simply by double-clicking the apporpriate batch file, I my PC is optimized for that mode.
