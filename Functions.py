@@ -4,6 +4,7 @@ import subprocess
 import time
 import pygetwindow
 import pyautogui
+import win32gui
 
 def checkIfProcessRunning(processName):
     # Iterate over the all the running process
@@ -15,6 +16,11 @@ def checkIfProcessRunning(processName):
         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
             pass
     return False;
+
+def enumHandler(hwnd, lParam):
+    if win32gui.IsWindowVisible(hwnd):
+        if 'ExpressVPN' in win32gui.GetWindowText(hwnd):
+            win32gui.MoveWindow(hwnd, 0, 0, 100, 100, True)
 
 def startFlux():
     os.startfile(r'C:\Users\dmagn\AppData\Local\FluxSoftware\Flux\flux.exe')
