@@ -87,7 +87,7 @@ def adjustWindows(mode):
                 i.minimize()
 
         elif mode == 'work':
-            # close Discord, close Steam
+            # close Discord close Steam
             if "Discord" in i.title:
                 i.close()
             elif "Steam" in i.title:
