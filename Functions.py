@@ -53,7 +53,7 @@ def closeExpressVPN():
         pyautogui.leftClick(40, 50)
         time.sleep(1)
         pyautogui.leftClick(40, 280)
-        time.sleep(1)
+        time.sleep(4)
 
 def setPrimaryMonitor(monitor):
     if monitor == 'middle':
