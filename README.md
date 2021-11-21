@@ -22,6 +22,6 @@ Then, simply by double-clicking the apporpriate batch file, my gaming PC is opti
 
 Main Features:
 
-Changes Default Audio Output Device
-Changes Primary Monitor
+Changes Default Audio Output Device,
+Changes Primary Monitor,
 Toggles Applications on/off or minimized/maximized
