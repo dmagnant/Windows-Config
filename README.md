@@ -1,6 +1,6 @@
 PROBLEM:
 
-When I created these scripts my setup involved 3 monitors, with the middle one being shared between my work laptop and my gaming PC. When switching between work, playing video games, or generally browsing during off-work hours, I would change several settings to optimize my PC accordingly.
+My setup involved 3 monitors, with the middle one being shared between my work laptop and my gaming PC. When switching between work, playing video games, or generally browsing during off-work hours, I would change several settings to optimize my PC accordingly.
 
 SOLUTION:
 
