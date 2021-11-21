@@ -58,18 +58,18 @@ def closeExpressVPN():
 def setPrimaryMonitor(monitor):
     if monitor == 'middle':
         # Set middle monitor as primary
-        os.system(r'"C:\\Users\\dmagn\\Google Drive\\Projects\\Coding\\Python\\Windows Config\\Resources\\nircmd.exe" setprimarydisplay 3')
+        os.system(r'"C:\\Users\\dmagn\\My Drive\\Projects\\Coding\\Python\\Windows Config\\Resources\\nircmd.exe" setprimarydisplay 3')
     elif monitor == 'right':
         # Set middle monitor as primary
-        os.system(r'"C:\\Users\\dmagn\\Google Drive\\Projects\\Coding\\Python\\Windows Config\\Resources\\nircmd.exe" setprimarydisplay 1')
+        os.system(r'"C:\\Users\\dmagn\\My Drive\\Projects\\Coding\\Python\\Windows Config\\Resources\\nircmd.exe" setprimarydisplay 1')
 
 def setPrimaryAudio(device):
     if device == 'headphones':
         # Set Audio Device to Headphones
-        p = subprocess.Popen(["powershell.exe", '-ExecutionPolicy', 'Unrestricted', '-File', r'C:\\Users\\dmagn\\Google Drive\\Projects\\Coding\\Python\\Windows Config\\Resources\\headphones.ps1'])
+        p = subprocess.Popen(["powershell.exe", '-ExecutionPolicy', 'Unrestricted', '-File', r'C:\\Users\\dmagn\\My Drive\\Projects\\Coding\\Python\\Windows Config\\Resources\\headphones.ps1'])
     if device == 'speakers':
         # Set Audio Device to Headphones
-        p = subprocess.Popen(["powershell.exe", '-ExecutionPolicy', 'Unrestricted', '-File', r'C:\\Users\\dmagn\\Google Drive\\Projects\\Coding\\Python\\Windows Config\\Resources\\speakers.ps1'])
+        p = subprocess.Popen(["powershell.exe", '-ExecutionPolicy', 'Unrestricted', '-File', r'C:\\Users\\dmagn\\My Drive\\Projects\\Coding\\Python\\Windows Config\\Resources\\speakers.ps1'])
 
 def adjustWindows(mode):
     for i in pygetwindow.getAllWindows():
