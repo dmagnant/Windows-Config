@@ -7,32 +7,23 @@ import pyautogui
 import win32gui
 
 def checkIfProcessRunning(processName):
-    # Iterate over the all the running process
+    # Iterate over the all the running processes
     for proc in psutil.process_iter():
         try:
-            # Check if process name contains the given name string.
+            # Check if process name contains the given name string
             if processName.lower() in proc.name().lower():
                 return True
         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
             pass
     return False;
 
-def enumHandler(hwnd, lParam):
-    if win32gui.IsWindowVisible(hwnd):
-        if 'ExpressVPN' in win32gui.GetWindowText(hwnd):
-            win32gui.MoveWindow(hwnd, 0, 0, 100, 100, True)
-
-def startFlux():
+def toggleFlux(boolean):
     os.startfile(r'C:\Users\dmagn\AppData\Local\FluxSoftware\Flux\flux.exe')
     time.sleep(1)
     flux = pygetwindow.getWindowsWithTitle('f.lux: Reduce eyestrain, day and night ')[0]
-    flux.minimize()
-
-def closeFlux():
-    if checkIfProcessRunning('flux.exe'):
-        os.startfile(r'C:\Users\dmagn\AppData\Local\FluxSoftware\Flux\flux.exe')
-        time.sleep(1)
-        flux = pygetwindow.getWindowsWithTitle('f.lux: Reduce eyestrain, day and night ')[0]
+    if boolean:
+        flux.minimize()
+    else:
         flux.close()
 
 def startExpressVPN():

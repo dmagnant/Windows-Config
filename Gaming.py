@@ -1,8 +1,7 @@
-from Functions import setPrimaryMonitor, setPrimaryAudio, closeFlux, adjustWindows, closeExpressVPN
+from Functions import setPrimaryMonitor, setPrimaryAudio, toggleFlux, adjustWindows, closeExpressVPN
 
 setPrimaryMonitor('middle')
 setPrimaryAudio('headphones')
 closeExpressVPN()
-closeFlux()
+toggleFlux(False)
 adjustWindows('gaming')
-
