@@ -21,10 +21,7 @@ def toggleFlux(boolean):
     os.startfile(r'C:\Users\dmagn\AppData\Local\FluxSoftware\Flux\flux.exe')
     time.sleep(1)
     flux = pygetwindow.getWindowsWithTitle('f.lux: Reduce eyestrain, day and night ')[0]
-    if boolean:
-        flux.minimize()
-    else:
-        flux.close()
+    flux.minimize() if boolean else flux.close()
 
 def startExpressVPN():
     os.startfile(r'C:\Program Files (x86)\ExpressVPN\expressvpn-ui\ExpressVPN.exe')
