@@ -4,7 +4,6 @@ import subprocess
 import time
 import pygetwindow
 import pyautogui
-import win32gui
 
 def checkIfProcessRunning(processName):
     # Iterate over the all the running processes
