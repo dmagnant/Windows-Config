@@ -35,7 +35,7 @@ def closeExpressVPN():
         time.sleep(1)
         EVPN = pygetwindow.getWindowsWithTitle('ExpressVPN')[0]
         EVPN.restore()
-        EVPN.move(0, 0)
+        EVPN.moveTo(0, 0)
         EVPN.activate()
         pyautogui.leftClick(40, 50)
         time.sleep(1)
