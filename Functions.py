@@ -1,9 +1,11 @@
-import psutil
 import os
 import subprocess
 import time
-import pygetwindow
+
+import psutil
 import pyautogui
+import pygetwindow
+
 
 def checkIfProcessRunning(processName):
     # Iterate over the all the running processes

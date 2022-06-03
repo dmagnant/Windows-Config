@@ -1,4 +1,5 @@
-from Functions import setPrimaryMonitor, setPrimaryAudio, toggleFlux, startExpressVPN
+from Functions import (setPrimaryAudio, setPrimaryMonitor, startExpressVPN,
+                       toggleFlux)
 
 setPrimaryMonitor('middle')
 setPrimaryAudio('speakers')
